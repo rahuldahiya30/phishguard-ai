@@ -348,6 +348,106 @@ export default function App() {
               ))}
             </>
           )}
+
+              {/* ── FOOTER ── */}
+          <footer style={{
+            borderTop: '1px solid rgba(255,255,255,0.05)',
+            padding: '24px 32px',
+            marginTop: '8px',
+          }}>
+            <div style={{
+              maxWidth: 1200,
+              margin: '0 auto',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '12px',
+            }}>
+
+              {/* Left — branding */}
+              <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+                <div style={{
+                  width: 24, height: 24, borderRadius: 6,
+                  background: 'linear-gradient(135deg,#22d3ee,#06b6d4)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 10, fontWeight: 800, color: '#04080f',
+                }}>PG</div>
+                <span style={{
+                  fontSize: 13, fontWeight: 700, color: 'var(--text-2)',
+                  fontFamily: 'var(--font-display)',
+                }}>
+                  Phish<span style={{ color:'var(--cyan)' }}>Guard</span> AI
+                </span>
+              </div>
+
+              {/* Center — made with love */}
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 6,
+                fontSize: 13, color: 'var(--text-3)',
+                fontFamily: 'var(--font-mono)',
+              }}>
+                <span>crafted with</span>
+                <span style={{
+                  color: '#f43f5e',
+                  fontSize: 14,
+                  animation: 'heartbeat 1.5s ease infinite',
+                }}>♥</span>
+                <span>by</span>
+                <span style={{
+                  color: 'var(--text-1)',
+                  fontWeight: 600,
+                  fontFamily: 'var(--font-display)',
+                  background: 'linear-gradient(90deg, var(--cyan), #06b6d4)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>Rahul Dahiya</span>
+              </div>
+
+              {/* Right — links */}
+              <div style={{ display:'flex', alignItems:'center', gap:16 }}>
+                <a href="https://github.com/rahuldahiya30/phishguard-ai"
+                  target="_blank" rel="noreferrer"
+                  style={{
+                    fontSize: 11, color: 'var(--text-3)',
+                    fontFamily: 'var(--font-mono)',
+                    textDecoration: 'none',
+                    display: 'flex', alignItems: 'center', gap: 5,
+                    transition: 'color 0.15s',
+                  }}
+                  onMouseEnter={e => e.target.style.color='var(--cyan)'}
+                  onMouseLeave={e => e.target.style.color='var(--text-3)'}
+                >
+                  ⌥ GitHub
+                </a>
+                <div style={{
+                  fontSize: 11, color: 'var(--text-3)',
+                  fontFamily: 'var(--font-mono)',
+                  display: 'flex', alignItems: 'center', gap: 5,
+                }}>
+                  <span style={{
+                    width: 5, height: 5, borderRadius: '50%',
+                    background: 'var(--green)',
+                    boxShadow: '0 0 6px var(--green)',
+                    display: 'inline-block',
+                  }} />
+                  All systems operational
+                </div>
+              </div>
+
+            </div>
+
+            <style>{`
+              @keyframes heartbeat {
+                0%,100% { transform: scale(1);   }
+                14%      { transform: scale(1.3); }
+                28%      { transform: scale(1);   }
+                42%      { transform: scale(1.2); }
+                70%      { transform: scale(1);   }
+              }
+            `}</style>
+          </footer>
+
         </div>
       </main>
 
